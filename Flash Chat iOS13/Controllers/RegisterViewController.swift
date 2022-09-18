@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
 
@@ -14,6 +15,21 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextfield: UITextField!
     
     @IBAction func registerPressed(_ sender: UIButton) {
+        
+        if let email = emailTextfield.text, let password = passwordTextfield.text{
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error{
+                    print(e.localizedDescription)
+                    let alert = UIAlertController(title: "경고", message: "비밀번호는 최소 6자링야 합니다.", preferredStyle: UIAlertController.Style.alert)
+                    let defaultAlert = UIAlertAction(title: "ok", style: UIAlertAction.Style.default)
+                    alert.addAction(defaultAlert)
+                    self.present(alert, animated: false)
+                    
+                }else{
+                    self.performSegue(withIdentifier: K.registerSegue, sender: self)
+                }
+            }
+        }
     }
     
 }

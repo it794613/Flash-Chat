@@ -1,0 +1,20 @@
+PODS:
+  - CLTypingLabel (0.4.0)
+  - IQKeyboardManagerSwift (6.3.0)
+
+DEPENDENCIES:
+  - CLTypingLabel (~> 0.4.0)
+  - IQKeyboardManagerSwift (= 6.3.0)
+
+SPEC REPOS:
+  trunk:
+    - CLTypingLabel
+    - IQKeyboardManagerSwift
+
+SPEC CHECKSUMS:
+  CLTypingLabel: 95a7d1faf7e3d1d952cd11cb0491d17d80c50934
+  IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+
+PODFILE CHECKSUM: 16bf561f1f10d869b2d7ed2a5f2ae302a1d3c65b
+
+COCOAPODS: 1.11.3
